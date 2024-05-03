@@ -14,9 +14,17 @@ class _SplashScreenState extends State<SplashScreen> {
       debugShowCheckedModeBanner: false,
       home:Scaffold(
         appBar: AppBar(
-         title: Text('Talo Wadaag',),),
-
+         title: Text('Talo Wadaag',),
+         centerTitle: true,
+         actions: [Icon(Icons.search_outlined,size: 10,)
+         ],
+         ),
+         body: SafeArea(child: Column(
+          children: [Row(children: [
+            ListTile(trailing: CircleAvatar(backgroundColor: Colors.indigo.shade900,),),],)],)
+         ),
         ),
+
       );
   
   }

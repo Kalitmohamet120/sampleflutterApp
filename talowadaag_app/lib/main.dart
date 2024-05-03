@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:talowadaag_app/company-profile.dart';
 import 'package:talowadaag_app/company_category.dart';
+import 'package:talowadaag_app/company_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Company_cat(),
+      home: const FutureImageAvatar(),
     );
   }
 }
