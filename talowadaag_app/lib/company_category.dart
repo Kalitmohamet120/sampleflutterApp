@@ -13,6 +13,13 @@ class _Company_catState extends State<Company_cat> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar:AppBar(
+          title: Text('Back'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,color: Color.fromARGB(255, 44, 15, 131),),
+          onPressed: () {
+            Navigator.pop(context);  // Go back to the previous screen
+          },)),
 
     
 
@@ -29,7 +36,8 @@ class _Company_catState extends State<Company_cat> {
              //
              (children: [
                Text('Company Category',
-               style: TextStyle(fontSize: 30,color: const Color.fromARGB(255, 44, 15, 131)),),
+               style: TextStyle(
+                fontSize: 30,color: const Color.fromARGB(255, 44, 15, 131)),),
             ],),
             SizedBox(height: 30,),
              TextField(
@@ -61,8 +69,11 @@ class _Company_catState extends State<Company_cat> {
                                   );
               
               });
-             }, child: Text('Submit',style: TextStyle(fontSize: 30,color: Colors.white),
-             ),style:ElevatedButton.styleFrom(backgroundColor:Color.fromARGB(255, 44, 15, 131)))
+             }, child: Text(
+              'Submit',style: TextStyle
+              (fontSize: 30,color: Colors.white),
+             ),style:ElevatedButton.styleFrom(
+              backgroundColor:Color.fromARGB(255, 44, 15, 131)))
              ],),
            ),
          ],

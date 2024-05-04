@@ -13,6 +13,14 @@ class _CompanyProfileState extends State<CompanyProfile> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar:AppBar(
+          title: Text('Back'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,color: Color.fromARGB(255, 44, 15, 131),),
+          onPressed: () {
+            Navigator.pop(context);  // Go back to the previous screen
+          },)
+          ),
         body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Image.asset('assets/logo.jpeg', height: 100),
           Padding(
@@ -90,7 +98,7 @@ class _CompanyProfileState extends State<CompanyProfile> {
         ],
           ),
         ),
-     
+        
     );
   }
 }
